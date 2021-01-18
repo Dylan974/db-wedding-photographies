@@ -6,9 +6,20 @@
   z-index: -1;
 }
 
-.bgText {
-  font-size: 2rem;
-  line-height: 3rem;
-  text-align: center;
-  text-shadow: 1px 1px 1px #3c5c5e;
+.bgTextName {
+  font-size: 3rem;
+  text-align: left;
+  color: white;
+  text-shadow: 2px 2px 2px grey;
+  margin-left: 150px;
+  margin-top: 50px;
+}
+
+.bgTextPhoto {
+  font-size: 3rem;
+  text-align: left;
+  color: white;
+  text-shadow: 2px 2px 2px grey;
+  margin-left: 50px;
+  margin-top: -50px;
 }
