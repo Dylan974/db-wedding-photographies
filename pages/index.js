@@ -1,11 +1,11 @@
 import Image from "next/image";
 
 import Layout from "../components/Layout/Layout";
-import { bgWrap, bgText } from "../style.module.css";
+import { bgWrap, bgTextName, bgTextPhoto } from "../style.module.css";
 
 const Index = () => (
-  <div >
-    <Layout className={bgText}> </Layout>
+  <div>
+    <Layout> </Layout>
     <div className={bgWrap}>
       <Image
         src="/home2.jpg"
@@ -15,6 +15,8 @@ const Index = () => (
         quality={100}
       />
     </div>
+    <p className={bgTextName}>Dylan Boyer</p>
+    <p className={bgTextPhoto}>Photographe de mariage</p>
   </div>
 );
 
