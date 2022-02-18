@@ -1,12 +1,11 @@
-import { Input } from "@nextui-org/react";
+import { Textarea } from "@nextui-org/react";
 import { Controller } from "react-hook-form";
 import { get } from "lodash";
 
-const InputText = ({
+const InputTextArea = ({
   name,
   control,
   rules,
-  type = "text",
   errors,
   required = false,
   defaultValue = "",
@@ -18,7 +17,7 @@ const InputText = ({
       rules={rules}
       defaultValue={defaultValue}
       render={({ field: { onChange, value, name } }) => (
-        <Input
+        <Textarea
           required={required}
           onChange={onChange}
           value={value}
@@ -27,11 +26,10 @@ const InputText = ({
           labelPlaceholder={name}
           width="100%"
           helperText={get(errors, [name, "message"], undefined)}
-          type={type}
         />
       )}
     />
   );
 };
 
-export default InputText;
+export default InputTextArea;
