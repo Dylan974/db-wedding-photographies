@@ -8,8 +8,8 @@ const Index = () => (
     <Layout className={bgText}> </Layout>
     <div className={bgWrap}>
       <Image
-        src="/home.jpg"
-        alt="photo mariage d'acceuil"
+        src="/home2.jpg"
+        alt="photo mariage acceuil"
         layout="fill"
         objectFit="cover"
         quality={100}
