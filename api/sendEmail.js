@@ -1,28 +1,23 @@
-require('dotenv').config();
+import 'dotenv/config';
 
-const sendEmail = ({ email, message, lastname, firstname }) => {
+export const sendEmail = ({ email, message, lastname, firstname }) => {
 
   const transporter = nodemailer.createTransport({
     port: 465,
     host: "smtp.gmail.com",
     auth: {
-      user: 'demo@demo.gmail',
+      user: 'dylanboyermail@gmail.com',
       pass: process.env.password,
     },
     secure: true,
   });
   const mailData = {
     from: email,
-    to: 'your email',
+    to: 'dylan.boyer.photographe@gmail.com',
     subject: `Message From ${firstname} ${lastname}`,
     text: message,
     html: <div>{message}</div>
   }
 
-  transporter.sendMail(mailData, (err, info) => {
-    if (err)
-      console.log(err)
-    else
-      console.log(info)
-  })
+  return transporter.sendMail(mailData);
 }

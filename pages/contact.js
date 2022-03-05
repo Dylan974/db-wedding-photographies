@@ -5,6 +5,7 @@ import Layout from "../components/Layout/Layout";
 import { pageTitle, bgText } from "../style.module.css";
 import InputTextArea from "../components/Input/inputTextArea";
 import { Button } from '@nextui-org/react';
+import { sendEmail } from '../api/sendEmail';
 
 const Contact = () => {
   const {
@@ -13,8 +14,10 @@ const Contact = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log(data);
+    const info = await sendEmail(...data);
+    console.log(info);
   };
 
   return (
