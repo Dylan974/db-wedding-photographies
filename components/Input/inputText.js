@@ -10,6 +10,7 @@ const InputText = ({
   errors,
   required = false,
   defaultValue = "",
+  label
 }) => {
   return (
     <Controller
@@ -24,7 +25,7 @@ const InputText = ({
           value={value}
           name={name}
           underlined
-          label={name.charAt(0).toUpperCase() + name.slice(1)}
+          label={label}
           labelPlaceholder={name}
           width="100%"
           helperText={get(errors, [name, "message"], undefined)}

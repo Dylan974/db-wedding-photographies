@@ -9,6 +9,7 @@ const InputTextArea = ({
   errors,
   required = false,
   defaultValue = "",
+  label
 }) => {
   return (
     <Controller
@@ -22,7 +23,7 @@ const InputTextArea = ({
           onChange={onChange}
           value={value}
           name={name}
-          label={name.charAt(0).toUpperCase() + name.slice(1)}
+          label={label}
           underlined
           labelPlaceholder={name}
           width="100%"

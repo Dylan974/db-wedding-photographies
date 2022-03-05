@@ -25,7 +25,8 @@ const Contact = () => {
         <Grid.Container gap={4}>
           <Grid xs={12}>
             <InputText
-              name="nom"
+              name="lastname"
+              label="Nom"
               control={control}
               errors={errors}
               required={true}
@@ -36,7 +37,8 @@ const Contact = () => {
           </Grid>
           <Grid xs={12}>
             <InputText
-              name="prénom"
+              name="firstname"
+              label="Prénom"
               control={control}
               errors={errors}
               required={true}
@@ -49,6 +51,7 @@ const Contact = () => {
             <InputText
               required={true}
               name="email"
+              label="Email"
               control={control}
               type="email"
               rules={{
@@ -61,6 +64,7 @@ const Contact = () => {
             <InputTextArea
               required={true}
               name="message"
+              label="Message"
               control={control}
               rules={{
                 required: { value: true, message: "Veuillez saisir votre message." },
