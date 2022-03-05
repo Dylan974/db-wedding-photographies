@@ -24,6 +24,7 @@ const InputText = ({
           value={value}
           name={name}
           underlined
+          label={name.charAt(0).toUpperCase() + name.slice(1)}
           labelPlaceholder={name}
           width="100%"
           helperText={get(errors, [name, "message"], undefined)}

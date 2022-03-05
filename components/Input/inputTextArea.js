@@ -22,6 +22,7 @@ const InputTextArea = ({
           onChange={onChange}
           value={value}
           name={name}
+          label={name.charAt(0).toUpperCase() + name.slice(1)}
           underlined
           labelPlaceholder={name}
           width="100%"

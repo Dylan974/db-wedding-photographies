@@ -1,15 +1,9 @@
 import Head from "next/head";
-
 import NavBar from "../NavBar/NavBar";
-import Header from "../Header/Header";
-
 import navButtons from "../../config/button";
-
 import styles from "./Layout.module.css";
 
 const Layout = (props) => {
-  const appTitle = `Dylan Boyer Photographe de mariage`;
-
   return (
     <div className={styles.Layout}>
       <Head>

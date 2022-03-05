@@ -1,10 +1,11 @@
 import Layout from "../../components/Layout/Layout";
-import Image from "next/image";
+import { pageTitle } from "../../style.module.css";
+
 
 const Index = () => (
   <div>
-    <Layout> </Layout>
-    <h1>A propos</h1>
+    <Layout />
+    <h1 className={pageTitle}>A propos</h1>
   </div>
 );
 

@@ -1,3 +1,10 @@
+.pageTitle {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  color: grey;
+}
+
 .bgWrap {
   position: fixed;
   height: 100vh;
@@ -7,19 +14,21 @@
 }
 
 .bgTextName {
-  font-size: 3rem;
+  position: absolute;
+  font-size: 2rem;
   text-align: left;
   color: white;
   text-shadow: 2px 2px 2px grey;
   margin-left: 150px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .bgTextPhoto {
-  font-size: 3rem;
+  position: absolute;
+  font-size: 2rem;
   text-align: left;
   color: white;
   text-shadow: 2px 2px 2px grey;
   margin-left: 50px;
-  margin-top: -50px;
+  margin-top: 50px;
 }

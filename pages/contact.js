@@ -1,9 +1,10 @@
-import { Grid, Input } from "@nextui-org/react";
+import { Grid } from "@nextui-org/react";
 import InputText from "../components/Input/inputText";
 import { useForm } from "react-hook-form";
 import Layout from "../components/Layout/Layout";
-import { bgWrap, bgText } from "../style.module.css";
+import { pageTitle, bgText } from "../style.module.css";
 import InputTextArea from "../components/Input/inputTextArea";
+import { Button } from '@nextui-org/react';
 
 const Contact = () => {
   const {
@@ -13,19 +14,18 @@ const Contact = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("TEST");
-    console.log(errors);
     console.log(data);
   };
 
   return (
     <>
       <Layout className={bgText}> </Layout>
+      <h1 className={pageTitle}>Contact</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Grid.Container gap={4}>
           <Grid xs={12}>
             <InputText
-              name="Nom"
+              name="nom"
               control={control}
               errors={errors}
               required={true}
@@ -36,7 +36,7 @@ const Contact = () => {
           </Grid>
           <Grid xs={12}>
             <InputText
-              name="Prénom"
+              name="prénom"
               control={control}
               errors={errors}
               required={true}
@@ -48,7 +48,7 @@ const Contact = () => {
           <Grid xs={12}>
             <InputText
               required={true}
-              name="Email"
+              name="email"
               control={control}
               type="email"
               rules={{
@@ -60,16 +60,20 @@ const Contact = () => {
           <Grid xs={12}>
             <InputTextArea
               required={true}
-              name="Message"
+              name="message"
               control={control}
               rules={{
-                required: { value: true, message: "Veuillez saisir votre adresse mail." },
+                required: { value: true, message: "Veuillez saisir votre message." },
               }}
               errors={errors}
             />
           </Grid>
+          <Grid xs={12} alignItems="center" justify="center">
+            <Button type="submit" color="primary" ghost >
+              Envoyer le mail
+            </Button>
+          </Grid>
         </Grid.Container>
-        <input type="submit" />
       </form>
     </>
   );
