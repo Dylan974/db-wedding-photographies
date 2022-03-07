@@ -9,7 +9,8 @@ const InputTextArea = ({
   errors,
   required = false,
   defaultValue = "",
-  label
+  label,
+  readonly = false,
 }) => {
   return (
     <Controller
@@ -20,6 +21,7 @@ const InputTextArea = ({
       render={({ field: { onChange, value, name } }) => (
         <Textarea
           required={required}
+          readOnly={readonly}
           onChange={onChange}
           value={value}
           name={name}

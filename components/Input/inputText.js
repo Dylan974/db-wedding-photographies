@@ -10,7 +10,8 @@ const InputText = ({
   errors,
   required = false,
   defaultValue = "",
-  label
+  label,
+  readonly = false,
 }) => {
   return (
     <Controller
@@ -20,6 +21,7 @@ const InputText = ({
       defaultValue={defaultValue}
       render={({ field: { onChange, value, name } }) => (
         <Input
+          readOnly={readonly}
           required={required}
           onChange={onChange}
           value={value}
