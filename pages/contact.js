@@ -1,4 +1,4 @@
-import { Grid, Loading } from "@nextui-org/react";
+import { Grid, Loading, Text } from "@nextui-org/react";
 import InputText from "../components/Input/inputText";
 import { useForm } from "react-hook-form";
 import Layout from "../components/Layout/Layout";
@@ -51,7 +51,7 @@ const Contact = () => {
   return (
     <>
       <Layout className={bgText}> </Layout>
-      <h1 className={pageTitle}>Contact</h1>
+      <Text h1 className={pageTitle}>Contact</Text>
       <ToastContainer
         position="bottom-center"
         autoClose={5000}
